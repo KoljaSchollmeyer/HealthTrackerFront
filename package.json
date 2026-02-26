@@ -1,0 +1,26 @@
+{
+  "name": "healthtrackerfront",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/KoljaSchollmeyer/HealthTrackerFront#readme",
+  "bugs": {
+    "url": "https://github.com/KoljaSchollmeyer/HealthTrackerFront/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoljaSchollmeyer/HealthTrackerFront.git"
+  },
+  "license": "ISC",
+  "author": "Kolja Schollmeyer",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "@babel/core": "^7.29.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.28.6",
+    "babel-jest": "^30.2.0"
+  }
+}
