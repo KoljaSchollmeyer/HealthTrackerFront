@@ -15,7 +15,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "build": "npm --prefix \"Health Tracker\" run build-only",
+    "build": "npm --prefix \"Health Tracker\" ci && npm --prefix \"Health Tracker\" run build-only",
     "test": "jest"
   },
   "devDependencies": {
