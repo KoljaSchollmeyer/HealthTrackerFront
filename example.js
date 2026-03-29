@@ -4,7 +4,3 @@ function oddNumbersOnly(arr) {
     return arr.filter(n => n % 2);
 }
 module.exports = { oddNumbersOnly };
-
-export default { oddNumbersOnly };
-
-import example from "./example";
