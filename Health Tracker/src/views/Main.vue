@@ -68,6 +68,16 @@ const onSubmit = () => {
         <p v-if="bmi">Aktueller Wert: <strong>{{ bmi }}</strong></p>
         <p v-else>Bitte Groesse und Gewicht eingeben, um den BMI zu sehen.</p>
       </section>
+
+      <section class="history-cta">
+        <h2>BMI Verlauf als Diagramm</h2>
+        <p>
+          Fuer eine bessere Uebersicht liegt der Verlauf jetzt in einer eigenen Seite.
+        </p>
+        <RouterLink class="history-link" :to="{ name: 'bmi-history' }">
+          Zum BMI-Diagramm
+        </RouterLink>
+      </section>
     </section>
 
     <aside class="profile-panel">
@@ -177,6 +187,38 @@ const onSubmit = () => {
   color: var(--app-text-primary);
 }
 
+.history-cta {
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.history-cta h2 {
+  margin: 0;
+}
+
+.history-cta p {
+  margin: 0;
+  color: var(--app-text-muted);
+}
+
+.history-link {
+  justify-self: start;
+  border: 1px solid var(--app-accent);
+  background: var(--app-accent);
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+}
+
+.history-link:hover {
+  background: var(--app-accent-hover);
+}
+
 .profile-panel h2 {
   margin: 0 0 0.4rem;
 }
@@ -243,6 +285,11 @@ button:hover {
 
   .stats-grid {
     grid-template-columns: 1fr;
+  }
+
+  .history-link {
+    width: 100%;
+    text-align: center;
   }
 }
 </style>

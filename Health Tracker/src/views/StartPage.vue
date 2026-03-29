@@ -23,15 +23,21 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, inject } from "vue";
 import { useRouter } from "vue-router";
 
 const email = ref("");
 const password = ref("");
 const router = useRouter();
+const isLoggedIn = inject<any>('isLoggedIn');
 
 const onLogin = () => {
   console.log("login", { email: email.value, password: password.value });
+
+  // Setze Login-Status über injected Ref
+  if (isLoggedIn) {
+    isLoggedIn.value = true;
+  }
 
   // Nach erfolgreichem Login zur Main-Page navigieren
   router.push({ name: 'main' });

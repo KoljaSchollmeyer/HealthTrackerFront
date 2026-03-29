@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import StartPage from '../views/StartPage.vue'
 import Overview from '../views/Overview.vue'
 import Main from '../views/Main.vue'
+import BmiHistory from '../views/BmiHistory.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,6 +22,11 @@ const router = createRouter({
       path: '/overview',
       name: 'overview',
       component: Overview,
+    },
+    {
+      path: '/bmi-history',
+      name: 'bmi-history',
+      component: BmiHistory,
     },
     {
       path: '/:pathMatch(.*)*',
